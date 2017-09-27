@@ -159,13 +159,15 @@ The main functionality of OneUp is to allow any registered user the ability to s
 
 With a few frameworks such as Node.js as well as the built in modules and node packages, this will give us the tools that can efficiently respond to client requests without having to resort to boilerplate code.
 
+#### 5.5.1 Development Environment Requirements
+
 | CSC | Requirement |
 |---|---|
 |Front End | React.js |
 |Server | Node.js, npm, Nodemon, EJS, Express, Mongoose, and more to be added |
 |Database | MongoDB |
 
-### 5.5.1 Development Environment Requirements
+#### 5.5.2 Execution Environment Requirements 
 
 | CSC | Requirement |
 |---|---|
