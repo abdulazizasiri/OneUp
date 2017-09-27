@@ -45,13 +45,13 @@ This is the Software Requirements Specification (SRS) document that details the 
         - 5.2.1.4.3 Share button module -- provides a shareable link to the video when clicked
     - 5.2.1.5 About Page CSU -- page contains information about the site
     
-- 5.2.2 Server CSC -- server that will handle user requests and respond accordingly
+- 5.2.2 OneUp Server CSC -- server that will handle user requests and respond accordingly
     - 5.2.2.1 NodeJS CSU -- modules for responding with proper pages
         - 5.2.2.1.1 Express -- module for flexible routing
         - 5.2.2.1.2 EJS -- module for template engine to serve up dynamic pages
     - 5.2.2.2 HTTP CSU -- modules for network requests
 
-- 5.2.3 Database CSC -- database components that will handle the data
+- 5.2.3 OneUp Database CSC -- database components that will handle the data
     - 5.2.3.1 MongoDB -- 
         - 5.2.3.1.1 Mongoose CSU -- module that communicates with MongoDB to store or retrieve data
     - 5.2.3.2 Index CSU -- modules to index data
