@@ -4,6 +4,11 @@
 
 This is the Software Requirements Specification (SRS) document that details the low-level system requirements for OneUp. OneUp is a web application containing a video database of user uploaded skate clips that will be curated by upvotes/downvotes from other users. The clips will be filtered by time of upload (weeks and all-time) with the most upvoted videos at the top of the list. Users will have their own profile displaying uploaded and upvoted videos to create an unique identity for each user. To build the application, OneUp will contain a front end, server, and database which will be designed using React, Node.js, and MongoDB (respectively). The front end will display the web pages for users to interact with while the back end server queries the database of skate clips that multiple users can access concurrently. Besides the three main components, OneUp will use EJS as a template engine for dynamic pages, as well as Express -- a Node.js package -- for flexible routing. Other packages of Node.js and React will be used to fulfill the design and building requirements for OneUp. 
 
+<p align="center">
+	<img src="../top_level.png" alt="High Level Diagram">
+	
+</p>
+
 
 ## Outline
 
@@ -154,4 +159,16 @@ The main functionality of OneUp is to allow any registered user the ability to s
 
 With a few frameworks such as Node.js as well as the built in modules and node packages, this will give us the tools that can efficiently respond to client requests without having to resort to boilerplate code.
 
+| CSC | Requirement |
+|---|---|
+|Front End | React.js |
+|Server | Node.js, npm, Nodemon, EJS, Express, Mongoose, and more to be added |
+|Database | MongoDB |
+
 ### 5.5.1 Development Environment Requirements
+
+| CSC | Requirement |
+|---|---|
+|Front End | Building I/O interface with React  |
+|Server | Cloud server (possibly AWS or Google Cloud Platform) |
+|Database | mLab as a cloud database |
