@@ -99,7 +99,7 @@ The main functionality of OneUp is to allow any registered user the ability to s
         - 5.3.1.10.3 The Home tab shall store any upvoted skate clips to a user’s personal library of upvoted skate clips in the Profile tab.
         - 5.3.1.10.4 The Home tab shall display username, title, date, upvote/downvote buttons, and number of upvotes for each video.
         - 5.3.1.10.5 The Home tab shall allow for registered users to upvote and downvote through the Home tab without going to the Skate Clip pop up window.
-	- 5.3.2.10.6 The Home tab shall prompt user login window if unregistered users try to upvote/downvote. 
+		- 5.3.2.10.6 The Home tab shall prompt login window if unregistered users try to upvote/downvote. 
     - 5.3.1.11 The Frontend shall include a tab that directs the user to an About page that contains information about the site.
     - 5.3.1.12 The Frontend should include a Contact Us page if the user has any questions.
         - 5.3.1.12.1 The Contact Us page should include 3 text entry fields with one being the user’s first name, the second being the user’s last name, and the third being the message the user wants to submit.
