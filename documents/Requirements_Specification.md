@@ -2,7 +2,9 @@
 
 ## 5.1 Introduction
 
-This is the Software Requirements Specification (SRS) document that details the low-level system requirements for OneUp. OneUp is a web application containing a video database of user uploaded skate clips that will be curated by upvotes/downvotes from other users. The clips will be filtered by time of upload (weeks and all-time) with the most upvoted videos at the top of the list. Users will have their own profile displaying uploaded and upvoted videos to create an unique identity for each user. To build the application, OneUp will contain a front end, server, and database which will be designed using React, Node.js, and MongoDB (respectively). The front end will display the web pages for users to interact with while the back end server queries the database of skate clips that multiple users can access concurrently. Besides the three main components, OneUp will use EJS as a template engine for dynamic pages, as well as Express -- a Node.js package -- for flexible routing. Other packages of Node.js and React will be used to fulfill the design and building requirements for OneUp. 
+This is the Software Requirements Specification (SRS) document that details the low-level system requirements for OneUp. OneUp is a web application that aims to expose young skateboard talent through crowdsource curation. It is essentially a video database of user uploaded skate clips that will be curated by upvotes/downvotes from other users. The clips will be filtered by time of upload (weeks and all-time) with the most upvoted videos at the top of the list. Each users will have his or her own profile displaying uploaded and upvoted videos to create an unique identity for each user. 
+
+To build the application, OneUp will contain a front end, server, and database which will be designed using React, Node.js, and MongoDB (respectively). The front end will display the web pages for users to interact with, while the back end server queries the database of skate clips that multiple users can access concurrently. Besides the three main components, OneUp will use EJS as a template engine for dynamic pages, as well as Express -- a Node.js package -- for flexible routing. Other packages of Node.js and React will be used to fulfill the design and building requirements for OneUp. 
 
 <p align="center">
 	<img src="../images/top_level.png" alt="High Level Diagram">
@@ -60,6 +62,8 @@ This is the Software Requirements Specification (SRS) document that details the 
 ### 5.3 Functional Requirements
 
 The main functionality of OneUp is to allow any registered user the ability to share his or her skate clip and receive recognition through the use of upvotes and downvotes from other users. The following requirements of the frontend interface walks through the functionalities that enable a user to easily interact with the web app. As mentioned, the main features for interaction include the ability to upload videos and upvote/downvote other videos seamlessly. The requirements of the server and database explain what is needed to allow successful user interaction, and the efficiency of the backend with querying video data. Choosing the right functional requirements is important to provide a great user experience.
+
+Note: "Should" requirements are requirements we are not 100% sure on following through with.
 
 - 5.3.1 Frontend
 
@@ -132,7 +136,7 @@ The main functionality of OneUp is to allow any registered user the ability to s
         - 5.3.3.1.1 The Database shall be able to query the data for skate clips based on time of upload
         - 5.3.3.1.2 The Database should be able to query the data for skate clips based on category of skating selected from drop down menu
     - 5.3.3.2 The Database shall provide functionalities to support retrieve users with lost informations such as username/passwords. 
-    - 5.3.3.3 The Database shall allow concurrency such as upvoting as the same time.
+    - 5.3.3.3 The Database shall allow concurrency such as upvoting at the same time.
     - 5.3.3.4 The Database shall take measures to prevent data loss through backup and recovery management.
     - 5.3.3.5 The Database shall allow administrative access to developers to delete certain videos.
 
