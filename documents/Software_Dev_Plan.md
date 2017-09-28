@@ -2,6 +2,11 @@
 
 ### 4.4.1 GANTT Chart
 
+<p align="center">
+	<img src="../images/GANTT.png" alt="High Level Diagram">
+	
+</p>
+
 ### 4.4.2 Task/Resource Table
 
 We plan on doing everything together without splitting up the workload too much.
