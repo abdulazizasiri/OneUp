@@ -1,1 +1,3 @@
-alert("Hello World");
+var React = require('react');
+var ReactDOM = require('react-dom');
+
