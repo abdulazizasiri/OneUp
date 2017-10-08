@@ -2,33 +2,33 @@
 <html>
 <head>
 
-  <script src="https://fb.me/react-0.14.3.js"></script>
-<script src="https://fb.me/react-dom-0.14.3.js"></script>
+  <script src="https://fb.me/react-15.2.1.js"></script>
+  <script src="https://fb.me/react-dom-15.2.1.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+  <link rel='stylesheet' type='text/css' href='style.css'>
   <title> OneUp </title>
 </head>
 <body>
 
 <div id='react-container'> </div>
 <script type="text/babel">
-const MyComponent = () => {
-  return <div>
-      <h1> This is me </h1>
-      <p> This is my first react component </p>
+// This is creates events on the page.
+var note = React.createClass({
+  render()// Each of the component needs to be rendered. 
+  {
+    return (
+      <div className='note'>
+      <p></p>
+      <span>
+        <button onClick=this.click>Edit </button>
+        <button> X </button>
+      </span>
       </div>
+      )
+  }
+})
 
-}
-// class myComponent extends React.Component {
-//   render() {
-//     return <div>
-//     <h1> This is me </h1>
-//     <p> This is my first react component </p>
-//     </div>
-//
-// }
-// }
-  ReactDOM.render(<MyComponent/>,
-     document.getElementById('react-container'))
+ReactDOm.render(<Note></Note>,document.getElementById('react-container'))
 </script>
 </body>
 </html>
