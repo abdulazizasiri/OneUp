@@ -4,12 +4,12 @@ ul {
    padding: 0;   
    overflow: hidden;
    background-color: black;
+   display: inline-block;
 }
 
 
 li {
-   float: right;
-   padding: 5px 20px;
+   padding: 1px 20px;
    left: 35px;
 }
 
@@ -25,3 +25,11 @@ ul.nav a:hover {
     color: white !important;
     text-shadow:0 0 1px white, 0 0 1px white, 0 0 1px white !important;
 }
+
+
+@media (max-width: 100px) {
+    .collapse {
+        display: none !important;
+    }
+}
+
