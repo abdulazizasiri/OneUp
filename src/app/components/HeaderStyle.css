@@ -3,10 +3,22 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #FFF;
-    float: right;
+    background-color: black;
 }
 
 li {
     float: right;
+    padding: 5px 20px;
+    left: 35px;
+}
+
+li a {
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: black;
 }
