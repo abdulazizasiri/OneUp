@@ -1,0 +1,12 @@
+Since MongoDB has a 16 MB file size limit, It would be impossible to store large files of videos and Images directly to MongoDB database, instead we will use the MongoDB API GridFs. 
+
+How does GridFS work? 
+
+1-GridFs breaks up the file into smaller more manageable chunks.
+
+2-Store these chunks of data in one collection called “fs.chucnks”. 
+
+3-stores the information about the whole file itself in another collection called “fs.files.” 
+
+4-connects these documents by properties that are references to each other.
+
