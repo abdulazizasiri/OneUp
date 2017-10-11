@@ -86,7 +86,7 @@ Development and demonstration for the project require the same hardware:
 - Nodemon v1.12.1
 - Bootstrap
 - GitHub
-- GridFS (for MongoDB videos)
+- GridFS
 
 
 ### 4.3 Project Organization
