@@ -46,16 +46,12 @@ Milestones
 - Week  07 (10/11) -- Software Development Plan Document
 	- Software Development Plan (SDP) which describes the process to building the application including scheduling and software/hardware resources. 
 	- Organize meetings, communication lines, and assign official titles to each team member
-- Week 09 (10/27) -- Complete Front-End Development
-	- Graphical User Interface that aligns with initial wireframe design
-	- Fully functional front-end with proper routing to each view
 - Week 10 (11/1) -- Architecture Section of the Software Design Description Document
 	- Architectural Design Specification document which presents the system components and their relation to one another. 
 - Week 12 (11/15) -- Software Design Description Document 
 	- The Design Description Document provides every detail of the software and it’s components (CSC/CSU). 
-- Week 14 (11/29) -- Test and Integration Plan/Complete Back-End Development
+- Week 14 (11/29) -- Test and Integration Plan
 	- Testing document to uncover bugs and defects. Includes unit tests and integrations tests on software.
-	- Fully functional back-end with a server that provides proper functionality for clients. This includes retrieving videos from the database or storing client information within the database.
 - Week 15 (12/6) -- User’s Manual
 	- Preliminary User’s Manual that describes in detail how to use the software
 - Week 16 (12/13) -- User’s Manual & Product Delivery
