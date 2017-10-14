@@ -3,7 +3,6 @@ var ReactDOM = require('react-dom');*/
 
 import React from "react";
 import { render } from "react-dom";
-
 import { Header } from "./components/Header";
 
 class App extends React.Component {
@@ -21,4 +20,3 @@ class App extends React.Component {
 }
 
 render(<App/>, window.document.getElementById("app"));
-
