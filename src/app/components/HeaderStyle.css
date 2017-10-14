@@ -4,15 +4,13 @@
     color: white !important;
 }
 
+
 .navbar{
     background-color: black !important;
     top: 40px ;
     margin: 0;
 }
 
-.navbar-collapse.collapse {
-  display: block !important;
-}
 
 ul {
    list-style-type: none !important;
@@ -23,10 +21,6 @@ ul {
    display: inline-block !important;
 }
 
-
-li {
-
-} 
 
 li a {
     font-size: .85em;

@@ -7,20 +7,59 @@ export class Header extends React.Component {
   render(){
 
      return(
-        <nav className="navbar navbar-inverse navbar-fixed-top app-navbar">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">OneUp</a>
-                    <ul className="nav navbar-nav navbar-right">
+        /*<nav classNameName="navbar navbar-inverse navbar-fixed-top app-navbar">
+
+            <div classNameName="container-fluid">
+                <a classNameName="navbar-brand" href="#">OneUp</a>
+                    <ul classNameName="nav navbar-nav navbar-right">
                        <li><a href="#">Home</a></li>
                        <li><a href="#">About</a></li>
                        <li><a href="#">Sign In / Create Account</a></li>
                     </ul> 
             </div>
-            <div className="navbar-collapse collapse" id="navbar-collapse-main">
-                <ul className="nav navbar-nav navbar-right m-r-0 hidden-xs">
-                </ul>
+
+        </nav> */
+
+        <nav className="navbar navbar-inverse navbar-fixed-top app-navbar" role="navigation">
+            <div className="container">
+
+                <div className="navbar-header">
+                    
+                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span className="sr-only">Toggle navigation</span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                    </button>
+
+                    <a className="navbar-brand" href="#">OneUp</a> 
+
+               </div>
+
+
+               <div className="collapse navbar-collapse pull-right" id="navbar" >
+                    <ul className="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Sign In / Create Account</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-        </nav> 
+
+        </nav>   
+
+
+
+
+
+
     ); 
 
   } 
