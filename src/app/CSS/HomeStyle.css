@@ -1,6 +1,62 @@
 
-a {
+
+.weekbtn.btn-link {
     color: red;
     background-color: transparent;
-    text-decoration: none;
+    text-decoration: underline;
+    font-family: AppleGothic;
+    margin-top: 20px;
+    font-size: 80%;
+}
+.weekbtn.btn-link:hover{
+    color: red !important;
+    text-shadow:0 0 1px red, 0 0 1px red, 0 0 1px red !important;
+}
+
+b, strong {
+    color: white;
+}
+
+.alltime.btn-link{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+    font-family: AppleGothic;
+    margin-top: 20px;
+    font-size: 80%;
+}
+
+.alltime.btn-link:hover{
+    color: red !important;
+    text-shadow:0 0 1px red, 0 0 1px red, 0 0 1px red !important;
+}
+
+
+.weekName{
+    color: red;
+    font-family: AppleGothic;
+    font-size: 90%;
+}
+
+
+.divider {
+    width: 100%;
+    float: left;
+    }
+.inner {
+    border-bottom: 1px solid;
+    border-color: white;
+}
+
+.text-left{
+  color: white;
+  font-size: 140%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.glyphicon{
+  color: red;
+  margin-right: 60px;
+  font-size: 15px;
 }

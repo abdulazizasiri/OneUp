@@ -17,7 +17,7 @@ const Header = () => (
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="#">OneUp</a>
+                <a className="navbar-brand" href="/">OneUp</a>
             </div>
 
 
