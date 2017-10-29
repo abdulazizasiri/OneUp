@@ -53,10 +53,19 @@ b, strong {
   font-size: 140%;
   margin-top: 30px;
   margin-left: 30px;
+  position: fixed;
 }
 
-.glyphicon{
+.glyphicon.glyphicon-chevron-up{
   color: red;
   margin-right: 60px;
   font-size: 15px;
+  margin-top: 20px;
+}
+
+.glyphicon.glyphicon-chevron-down{
+  color: red;
+  margin-right: 60px;
+  font-size: 15px;
+  margin-top: 20px;
 }
