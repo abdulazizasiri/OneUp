@@ -2,13 +2,15 @@ import React from "react";
 import styles from "../CSS/HomeStyle.css";
 import css from "../CSS/HomeStyle.css";
 import { Player } from 'video-react';
+import { Link } from "react-router-dom";
+
 
 
 const Home = () => (
 
   <div className="container-fluid">
     <div className="row">
-      <div className="col-xs-12 col-md-3 text-center" style={{background:'black', height:'60px', top:'90px'}}>
+      <div className="col-xs-12 col-md-3 col-md-offset-1 text-center" style={{background:'black', height:'60px', top:'90px'}}>
         <button type="button" className="weekbtn btn-link">WEEK</button>
         <b>|</b>
         <button type="button" className="alltime btn-link">ALL-TIME</button>
