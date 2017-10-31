@@ -1,0 +1,24 @@
+
+
+.closeButton {
+   float: right;
+   background-color: #303030;
+   border: 0;
+}
+
+.panel > .panel-heading {
+   background-color: #303030;
+   border: 0;
+}
+
+.panel > .panel-body {
+   background-color: #303030;
+}
+
+.titleLabel {
+   float: left;
+}
+
+.descriptionLabel {
+   float: left;
+}

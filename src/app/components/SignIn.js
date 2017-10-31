@@ -1,5 +1,7 @@
 import React from 'react';
 import css from "../CSS/SignInStyle.css";
+import styles from "../CSS/SignInStyle.css";
+
 
 const SignIn = () => {
 
@@ -9,7 +11,7 @@ const SignIn = () => {
   };
 
   return(
-  <div className="container-fluid" style={{ display: "true"}}>
+  <div className="sign container-fluid" style={{ display: "true"}}>
      <div id="loginbox" style={{marginTop: "50px"}}
         className="mainbox col-sm-6 col-sm-offset-3 col-md-6 col-offset-3 col-lg-6 col-lg-offset-3">
         <div className="panel panel-info">

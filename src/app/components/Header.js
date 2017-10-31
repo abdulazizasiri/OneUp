@@ -1,10 +1,8 @@
-import React from "react";
-import styles from "../CSS/HeaderStyle.css";
-import css from "../CSS/HeaderStyle.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styles from '../CSS/HeaderStyle.css';
+import css from '../CSS/HeaderStyle.css';
+import { Link } from 'react-router-dom';
 
-
-//export const Header = (props) => {
 const Header = () => (
   <header>
     <nav className="navbar navbar-inverse navbar-fixed-top app-navbar" role="navigation">
@@ -26,7 +24,7 @@ const Header = () => (
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/about'>About</Link></li>
                     <li><Link to='/profile'>Profile</Link></li>
-                    <li><Link to='signin'>Sign In / Create Account</Link></li>
+                    <li><Link to='/signin'>Sign In / Create Account</Link></li>
                 </ul>
             </div>
 

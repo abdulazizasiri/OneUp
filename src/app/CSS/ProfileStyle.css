@@ -1,0 +1,51 @@
+.profile.container-fluid{
+  margin-top: 100px;
+}
+
+.profileImage > img.img-circle {
+    margin-top: 40px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #FFFFFF;
+    float: left;
+}
+
+.settingsButton {
+    border: 0;
+    background-color: #696969;
+    color: white;
+    display: inline-block;
+    border-radius: 2px;
+    width: 100px;
+}
+
+.uploadClips {
+    border: 0;
+    background-color: transparent;
+    border-radius: 25px;
+    float: right;
+}
+
+.uploadClipsButton {
+    border: 0;
+    background-color: transparent;
+    border-radius: 25px;
+    margin-left: 9px;
+}
+
+.glyphicon.glyphicon-plus-sign {
+   font-size: 50px;
+}
+
+.uploadsCount {
+   color: #990000;
+}
+
+.lineBorder {
+   margin-left: 5%;
+   margin-right: 5%;
+   border-style: solid;
+   border-width: 1px;
+   border-length: 75%;
+   border-color: white;
+}
