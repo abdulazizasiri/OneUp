@@ -107,6 +107,8 @@ Human        | Monitor
 
 This section displays the design and interaction of the main components within the OneUp interface.
 
+##### 6.2.2.1 Interface Identification and Diagrams
+
 Interface             | Description
 ----------------------| ------------------------------
 Upload Video          | Interface to upload a video with title and description
