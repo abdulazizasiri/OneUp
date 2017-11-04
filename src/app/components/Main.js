@@ -5,7 +5,7 @@ import About from './About';
 import SignIn from './SignIn';
 import UploadVideo from './UploadVideo';
 import Profile from './Profile';
-import Week from './Week';
+import AllTime from './AllTime';
 
 
 const Main = () => (
@@ -16,7 +16,7 @@ const Main = () => (
       <Route path='/signin' component={SignIn}/>
       <Route path='/profile' component={Profile}/>
       <Route path='/uploadvideo' component={UploadVideo}/>
-      <Route path='/week' component={Week}/>
+      <Route path='/alltime' component={AllTime}/>
     </Switch>
   </main>
 )

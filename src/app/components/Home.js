@@ -5,18 +5,22 @@ import { Link } from 'react-router-dom';
 
 const Home = (props) => {
 
-  const Week = () => {
-    props.history.push('/week');
+  const Home = () => {
+    props.history.push('/');
   };
+
+  const AllTime = () => {
+    props.history.push('/alltime');
+  }
 
   return(
 
   <div className="home container-fluid">
     <div className="row">
       <div className="col-xs-12 col-md-3 col-md-offset-1 text-center" style={{background:'black', height:'60px', top:'90px'}}>
-        <button onClick={Week} className="weekbtn btn-link">WEEK</button>
+        <button onClick={Home} className="week btn-link">WEEK</button>
         <b>|</b>
-        <button type="button" className="alltime btn-link">ALL-TIME</button>
+        <button onClick={AllTime} className="alltime btn-link">ALL-TIME</button>
       </div>
     </div>
     <div className="row">

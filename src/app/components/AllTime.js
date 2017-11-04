@@ -3,12 +3,29 @@ import styles from '../CSS/HomeStyle.css';
 import css from '../CSS/HomeStyle.css';
 import { Link } from 'react-router-dom';
 
-const Week = (props) => (
+const AllTime = (props) => {
+
+  const Home = () => {
+    props.history.push('/');
+  };
+
+  const AllTime = () => {
+    props.history.push('/alltime');
+  };
+
+  return(
 
   <div className="home container-fluid">
     <div className="row">
+      <div className="col-xs-12 col-md-3 col-md-offset-1 text-center" style={{background:'black', height:'60px', top:'90px'}}>
+        <button onClick={Home} className="weekbtn btn-link">WEEK</button>
+        <b>|</b>
+        <button onClick={AllTime} className="all btn-link">ALL-TIME</button>
+      </div>
+    </div>
+    <div className="row">
       <div className="col-xs-12 col-md-4 col-md-offset-4 text-center"style={{background:'black', height:'40px', top:'90px'}}>
-        <p className="weekName">WEEK 28</p>
+        <p className="weekName">ALL-TIME</p>
       </div>
     </div>
 
@@ -32,6 +49,6 @@ const Week = (props) => (
 
     </div>
   </div>
-)
-
-export default Week
+);
+};
+export default AllTime
