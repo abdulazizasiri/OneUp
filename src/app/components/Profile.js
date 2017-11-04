@@ -48,7 +48,7 @@ const Profile = (props) => {
 
                 <div className="col-xs-6 col-md-6" style={{background:'blue'}}>
                   <div className="row">
-                    <div className="col-xs-6 col-md-6 col-md-offset-4 text-center" style={{background:'orange'}}>
+                    <div className="col-xs-6 col-xs-offset-5 col-md-6 col-md-offset-4 text-center" style={{background:'orange'}}>
                       <div style={{marginRight: "20px"}} className="uploadClips">
                          <button onClick={handleClick} className="uploadClipsButton"><span className="glyphicon glyphicon-plus-sign"
                              style={{color: "red"}}></span></button><br/>
