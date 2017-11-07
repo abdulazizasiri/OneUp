@@ -99,7 +99,7 @@ Human        | Monitor
  OneUp has four main use cases that are dependent on whether or not the user is signed into the web app --  viewing videos, viewing profiles, uploading videos, ad upvoting/downvoting videos. The first two use cases do not require a user to be signed in. The first, viewing videos, allows any user to view a video on OneUp. Similarly, viewing another user’s profile is another use case that allows users to learn more about the user who uploaded a certain video. On the other hand, uploading and upvoting/downvoting videos are for users that have signed into the web app. Uploading videos allow users to share their clips for others to view and upvote/downvote. Upvoting/downvoting videos allows users to give their input on which video or skater should be recognized or not. 
 
 <p align="center">
-	<img src="../images/UseCaseUML.png">
+	<img src="../images/OneUpUseCase.png">
 	
 </p>
 
