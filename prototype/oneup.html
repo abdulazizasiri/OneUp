@@ -1,43 +1,78 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- <meta charset="utf-8"> -->
- <script src="https://fb.me/react-0.14.3.js"></script>
-  <script src="https://fb.me/react-dom-0.14.3.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<title> OneUp Home Page </title>
-</head>
-<body id='background'>
-	<div id="main"> </div>
-	<script type="text/babel">
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+            <link rel="stylesheet" type='text/css' href="styles.css">
+            <script src="https://fb.me/react-0.14.3.js"></script>
+            <script src="https://fb.me/react-dom-0.14.3.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js'> </script>
+        <title> OneUp Proejct </title>
+        </head>
+        <body>
+            
+            <!-- <div id="modal" class="display-1"></div> -->
+             <div class='text-white' id= "user_section"> </div>
+             
 
-	let MainPage = React.createClass({
-		render(){
-			return (
-				<div className='static_part'>
-				<span className="user_buttons">
-				<button  className='btn hid'> Home </button>
-				<button  className='btn hid specifc'> Sign in/ </button>
-				<button  className='btn hid'>About </button>
-				<button  className='btn hid'> Create Account </button>
-				</span>
-				<span className="timespan">
-				<button className="btn btn-link">Week</button>|
-				<button className="btn btn-link"> All-Time </button>
-				</span>
-				<span className="week_id">
-				 <button className="btn btn-link"> Week 10 </button>
-				 </span>
-				<h3 className='typography'>{this.props.children}</h3>
-				</div>
-
-				)
-		}
-	})
-	ReactDOM.render(<MainPage>OneUp</MainPage>,document.getElementById('main'))
-	</script>
-	</body>
-	</html>
+            <script type='text/babel'>
+       
+                let ContainerComponent = React.createClass({
+                incrementVote(){
+                    var computerScore = document.getElementById('values');
+                    var number = computerScore.innerHTML;
+                    number++;
+                    computerScore.innerHTML = number;
+               
+                },
+                decrementVote(){
+                    var computerScore = document.getElementById('values');
+                    var number = computerScore.innerHTML;
+                    number--;
+                    computerScore.innerHTML = number;
+               
+                },
+                incrementPost(){
+                   
+                },
+                render(){
+                    return (
+                        <div>
+                        
+                    <div className='container-1'>
+        
+                        <div className='bx0'>{this.props.count}</div>
+                        <div className='bx1'>
+                            <div id="youtube-video" >
+                                
+                                    <a href="video.html"> <video> 
+                                    <source src={this.props.vid_link} type="video/mp4" />
+                                    </video> </a>     
+                                </div>  
+                             </div>
+                             <div className='user_info_box'>
+                                <div className='user_info'>{this.props.text}</div>
+                              <span>By: <a  href='#'className='text-danger user_info1'> {this.props.user}</a></span>
+                                <span><div className='user_info_date'>{this.props.date}</div></span>
+                             </div> 
+                             <div className='rate'> 
+                             <button onClick={this.incrementVote}id='btn-up'>UP</button>
+                            <p className="btn-up" id='values'>  1 </p>
+                            <button onClick={this.decrementVote} className='btn-up1'>DOWN</button>
+                       </div>
+                </div> 
+                </div>
+                    )
+                }
+            })
+            ReactDOM.render(<div>
+            <ContainerComponent count={8} text="720 Ter Flip" date="posted:10/5/17" vid_link="skate.mp4" user="Aziz Asiri"></ContainerComponent>
+            </div>,document.getElementById('user_section')
+            )
+           </script>
+           
+            </body>
+            </html>
