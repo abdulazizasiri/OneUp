@@ -13,7 +13,7 @@ The following sections contain the descriptions of the details of the design of 
 The front-end is composed of multiple React JS components serving as the web-pages for the client. These components are routed to one another so that the client can easily switch between web-pages. User activities include creating an account, signing in, changing settings, viewing clips, viewing profiles uploading clips, and upvoting clips. Our implementation of these functions involves some components using JavaScript methods to execute these functions. If the component doesn’t have any JavaScript methods, the functionalities are implemented through HTML using React JS. Each component is considered its own class. 
 
 <p align="center">
-	<img src="../images/OneUpUseCase.png">
+	<img src="../images/ArchitectOneUp.png">
 	
 </p>
 
@@ -52,6 +52,14 @@ The video modal component displays the clip, the title of the clip, the descript
 ##### 7.2.1.9 About CSU Description (About.js)
 
 This component simply displays a few paragraphs that describes this web app. 
+
+##### 7.2.1.10 Use Case between the components
+
+<p align="center">
+	<img src="../images/OneUpUseCase.png">
+	
+</p>
+
 
 
 ### 7.3 Database CSU Design Description 
