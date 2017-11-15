@@ -86,7 +86,7 @@ The video collection has a relationship to the user entity because it needs them
   
 #### 7.3.3 Vote collection
 
-#####7.3.3.1 
+##### 7.3.3.1 
 The vote collection has a relation between the video collection and the user collection.
   - Upvote ID:  upvote id uniquely identifies which video has the highest up votes so the video can be listed on the top on the homepage. 
   - Video ID: vote entity needs the video id from the video entity.
