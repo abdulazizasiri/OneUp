@@ -111,8 +111,9 @@ The Node JS server will establish a connection with our Mongo cloud database on 
 
 Along with ‘POST’ requests within the server, there are also ‘GET’ requests. These ‘GET’ requests will retrieve the proper web pages for the client depending on the URL. In addition, these requests will also use mongoose to query the database for data associated with each web page. The cloud database will retrieve the data and pass it onto the server as JSON. The server will take that JSON data and pass it onto the front-end to be displayed on the web page.
 
-#### Architectural Diagram 
+### Architectural Diagram 
 
+Architecture between frontend and backend
 
 <p align="center">
 	<img src="../images/ArchitectOneUp.png">
