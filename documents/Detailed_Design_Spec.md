@@ -12,10 +12,6 @@ The following sections contain the descriptions of the details of the design of 
 
 The front-end is composed of multiple React JS components serving as the web-pages for the client. These components are routed to one another so that the client can easily switch between web-pages. User activities include creating an account, signing in, changing settings, viewing clips, viewing profiles uploading clips, and upvoting clips. Our implementation of these functions involves some components using JavaScript methods to execute these functions. If the component doesn’t have any JavaScript methods, the functionalities are implemented through HTML using React JS. Each component is considered its own class. 
 
-<p align="center">
-	<img src="../images/ArchitectOneUp.png">
-	
-</p>
 
 ##### 7.2.1.1 Routing CSU Description (Main.js)
 
@@ -115,6 +111,13 @@ The Node JS server will establish a connection with our Mongo cloud database on 
 
 Along with ‘POST’ requests within the server, there are also ‘GET’ requests. These ‘GET’ requests will retrieve the proper web pages for the client depending on the URL. In addition, these requests will also use mongoose to query the database for data associated with each web page. The cloud database will retrieve the data and pass it onto the server as JSON. The server will take that JSON data and pass it onto the front-end to be displayed on the web page.
 
+#### Architectural Diagram 
+
+
+<p align="center">
+	<img src="../images/ArchitectOneUp.png">
+	
+</p>
 
 
 
