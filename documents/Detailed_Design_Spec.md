@@ -33,6 +33,13 @@ The profile component displays the user profile picture, name, username, a setti
 
 The main function of this CSU is to allow users to upload a clip. The upload video component is another form that asks users to attach a clip, enter a title for the clip, and enter an optional description. Once the user completes the form, there is a button on the bottom of the panel to submit the clip. The component has one JavaScript method, closeWindow(), to close the UploadVideo panel and return to the user profile page. 
 
+<p align="center">
+	<img src="../images/upload.png">
+	
+</p>
+
+This is a state diagram for uploading a video. Users can only upload videos through their profile page and if they are logged in. A title and description are required with the attached video. 
+
 ##### 7.2.1.6 Settings CSU Description (Settings.js)
 
 The main function of this CSU is to allow users to edit their profile. The layout of this component is a panel containing a form within it. The form gives users the chance to change their profile picture, edit their bio, and edit their social media links. There is a button on the bottom of the panel that users would click to commit these changes to their profile.  Once the button is clicked, our Node JS server will signal our database to update those changes. The component has one JavaScript method, closeWindow(), to close the Settings panel and return to the user profile page. 
@@ -41,9 +48,17 @@ The main function of this CSU is to allow users to edit their profile. The layou
 
 The home component will display the clips that users upload to the site, organized by number of upvotes and by week or all time. Users can view the clips where they simply click on the thumbnail to watch it. This is handled through a JavaScript method, viewClip(), where a modal component would pop up that has the clip, the description of the clip, the title of the clip, the user that uploaded the clip, and the number of upvotes that the clip has. If a user wants to view the profile of the user who uploaded the clip, the user simply clicks on the username located right next to the thumbnail. This is handled through a JavaScript method, viewProfile(), where it will redirect to the user’s profile page. If the user wishes to upvote or downvote a video, the user simply clicks the up or down arrow located on the right of the thumbnail. This will fire off a function within our Node JS server to update the amount of upvotes within the database. If the user wishes to organize the clips by all time, the user would click the “All-Time” label at the top of the page. If the user wishes to organize the clips by week, the user would click the “Week” label at the top of the page. These are handled by JavaScript methods within the component called AllTime() and Week(). 
 
+<p align="center">
+	<img src="../images/upvote.png">
+	
+</p>
+
+This is a state diagram displaying the upvote function that is available on the home page CSU as well as in the video modal CSU below. As shown, users are only able to upvote videos if they are logged in. 
+
 ##### 7.2.1.8 Video Modal CSU Description (OneUpVideo.js)
 
 The video modal component displays the clip, the title of the clip, the description of the clip, the user that uploaded the clip, and the number of upvotes that the clip has. When the user clicks the thumbnail, the video will begin to play. This is handled by a JavaScript method within the component, showVideo(). If the user wishes to upvote the video the user would click the up arrow located on the right of the thumbnail. The upvotes of the video are incremented through a JavaScript method within the component called incrementVote(). If the user wishes to view the profile of the user that uploaded the clip, the user would click on the username located underneath the thumbnail. This is handled through a JavaScript method within the component called viewProfile(). If the user wishes to go back to the home page, the user simply clicks on the red x located on the top right of the modal. This is handled by a JavaScript method within the component called backHome(). 
+
 
 ##### 7.2.1.9 About CSU Description (About.js)
 
@@ -56,6 +71,7 @@ This component simply displays a few paragraphs that describes this web app.
 	
 </p>
 
+This diagram provides a general idea of how the components interact. The user interacts with the various components depending on whether or not they are signed in or not.
 
 
 ### 7.3 Database CSU Design Description 
@@ -67,7 +83,7 @@ This component simply displays a few paragraphs that describes this web app.
 	
 </p>
 
-OneUp uses MongoDB databases  that stores all information of OneUp users in a document. Each document is stored  in JSON file (javascript object notation). Each of these document is stored in a collection divides the document into chunks of collections.
+OneUp uses MongoDB databases  that stores all information of OneUp users in a document. Each document is stored  in JSON file (javascript object notation). Each of these document is stored in a collection divides the document into chunks of collections. The following section descriped each collection.
 
 #### 7.3.1 User collection
 
@@ -120,7 +136,7 @@ Architecture between frontend and backend
 	
 </p>
 
-
+This architecture displays what the front-end client contains as wel as the components that are built out using React.js. The bottom of the diagram lists other backend features/softwares used to hold the video and user information described before.
 
 
 
