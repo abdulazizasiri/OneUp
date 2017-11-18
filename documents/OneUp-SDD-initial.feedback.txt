@@ -1,0 +1,20 @@
+
+Hi, OneUp team ----
+
+Very nice work on this Preliminary SDD!
+
+A couple of things I noticed:
+1) the last paragraph in Section 6.1.1 seems to end in the mid
+   dle of a word....  :)
+2) is the figure in Section 6.2.1 a "use case" diagram?  If so, it needs a
+   bit of work.  If not, it is a good flow of the system so it's OK as-is.
+3) There are a couple of typo/formatting things in Section 6.2.2.2.
+4) Same paragraph, what is "Ajaj"?  typo?
+5) only see one diagram; should be a couple more....
+
+Fix these items in the next release for full credit on the document.
+
+You have 10% out of 10% which is an A-plus.
+
+Regards,
+Prof. Johnson
