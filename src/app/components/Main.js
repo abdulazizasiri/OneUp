@@ -6,6 +6,7 @@ import SignIn from './SignIn';
 import UploadVideo from './UploadVideo';
 import Profile from './Profile';
 import AllTime from './AllTime';
+import Video from './Video';
 
 
 const Main = () => (
@@ -17,6 +18,7 @@ const Main = () => (
       <Route path='/profile' component={Profile}/>
       <Route path='/uploadvideo' component={UploadVideo}/>
       <Route path='/alltime' component={AllTime}/>
+      <Route path='/video' component={Video}/>
     </Switch>
   </main>
 )

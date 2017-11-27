@@ -11,7 +11,11 @@ const Home = (props) => {
 
   const AllTime = () => {
     props.history.push('/alltime');
-  }
+  };
+
+  const Video = () => {
+    props.history.push('/video');
+  };
 
   return(
 
@@ -30,34 +34,35 @@ const Home = (props) => {
     </div>
 
     <div className="row">
-      <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'grey', height:'90px', top:'90px'}}>
+      <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'black', height:'90px', top:'90px'}}>
           <div className="divider"><div className="inner"></div></div>
           <div className="row">
-            <div className="col-xs-2 col-md-2" style={{background:'orange',height:'90px'}}>
+            <div className="col-xs-2 col-md-2" style={{background:'black',height:'90px'}}>
               <div className="text-left">1</div>
             </div>
-            <div className="col-xs-2 col-md-2" style={{background:'pink', height:'90px'}}>
+            <div className="col-xs-2 col-md-2 text-center" style={{background:'black', height:'90px'}}>
+              <button onClick={Video} className="video btn-primary">Video</button>
             </div>
-            <div className="col-xs-6 col-md-6" style={{background:'red', height:'90px'}}>
+            <div className="col-xs-6 col-md-6" style={{background:'black', height:'90px'}}>
             </div>
-            <div className="col-xs-2 col-md-2" style={{background:'purple', height:'90px'}}>
+            <div className="col-xs-2 col-md-2" style={{background:'black', height:'90px'}}>
               <div className="text-right"><a href="#" className="glyphicon glyphicon-chevron-up"></a></div>
               <div className="text-right"><a href="#" className="glyphicon glyphicon-chevron-down"></a></div>
             </div>
           </div>
       </div>
 
-      <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'grey', height:'90px', top:'90px'}}>
+      <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'black', height:'90px', top:'90px'}}>
           <div className="divider"><div className="inner"></div></div>
           <div className="row">
-            <div className="col-xs-2 col-md-2" style={{background:'orange',height:'90px'}}>
+            <div className="col-xs-2 col-md-2" style={{background:'black',height:'90px'}}>
               <div className="text-left">2</div>
             </div>
-            <div className="col-xs-2 col-md-2" style={{background:'pink', height:'90px'}}>
+            <div className="col-xs-2 col-md-2" style={{background:'black', height:'90px'}}>
             </div>
-            <div className="col-xs-6 col-md-6" style={{background:'red', height:'90px'}}>
+            <div className="col-xs-6 col-md-6" style={{background:'black', height:'90px'}}>
             </div>
-            <div className="col-xs-2 col-md-2" style={{background:'purple', height:'90px'}}>
+            <div className="col-xs-2 col-md-2" style={{background:'black', height:'90px'}}>
               <div className="text-right"><a href="#" className="glyphicon glyphicon-chevron-up"></a></div>
               <div className="text-right"><a href="#" className="glyphicon glyphicon-chevron-down"></a></div>
             </div>

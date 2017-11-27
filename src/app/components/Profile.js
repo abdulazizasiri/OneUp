@@ -15,30 +15,30 @@ const Profile = (props) => {
   <div className="profile container-fluid">
     <div className="row">
 
-       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'grey', marginTop:'50px'}}>
+       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'black', marginTop:'50px'}}>
           <div className="row">
-            <div className="col-xs-12 col-md-2" style={{height:'170px', background:'pink'}}>
+            <div className="col-xs-12 col-md-2" style={{height:'170px', background:'black'}}>
               <div className="profileImage">
                 <img className="img-circle" src="https://www.dragonsearch.com/wp-content/themes/dragonsearch/library/images/placeholders/thumbnail_placeholder.png"/>
               </div>
             </div>
 
-            <div className="col-xs-12 col-md-10" style={{background:'green', marginTop:'50px'}}>
+            <div className="col-xs-12 col-md-10" style={{background:'black', marginTop:'50px'}}>
 
               <div className="row">
-                <div className="col-xs-6 col-md-6" style={{background:'brown'}}>
+                <div className="col-xs-6 col-md-6" style={{background:'black'}}>
                    <div className="row">
-                      <div className="col-xs-8 col-md-8 text-center" style={{background:"yellow"}}>
+                      <div className="col-xs-8 col-md-8 text-center" style={{background:"black"}}>
                          <font className="name" color="white" size="5">Justin Lee</font>
                       </div>
                    </div>
                    <div className="row">
-                      <div className="col-xs-8 col-md-8 text-center" style={{background:"orange"}}>
+                      <div className="col-xs-8 col-md-8 text-center" style={{background:"black"}}>
                          <font className="username" color="white" size="3">jlee201</font>
                       </div>
                    </div>
                    <div className="row">
-                      <div className="col-xs-8 col-md-8 text-center" style={{background:'purple'}}>
+                      <div className="col-xs-8 col-md-8 text-center" style={{background:'black'}}>
                         <div className="settings">
                            <button type="button" className="settingsButton">Settings</button>
                         </div>
@@ -46,9 +46,9 @@ const Profile = (props) => {
                    </div>
                 </div>
 
-                <div className="col-xs-6 col-md-6" style={{background:'blue'}}>
+                <div className="col-xs-6 col-md-6" style={{background:'black'}}>
                   <div className="row">
-                    <div className="col-xs-6 col-xs-offset-5 col-md-6 col-md-offset-4 text-center" style={{background:'orange'}}>
+                    <div className="col-xs-6 col-xs-offset-5 col-md-6 col-md-offset-4 text-center" style={{background:'black'}}>
                       <div style={{marginRight: "20px"}} className="uploadClips">
                          <button onClick={handleClick} className="uploadClipsButton"><span className="glyphicon glyphicon-plus-sign"
                              style={{color: "red"}}></span></button><br/>
@@ -72,7 +72,7 @@ const Profile = (props) => {
 
 
     <div className="row" id="bio">
-       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{height: '40px',background:'red'}}>
+       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{height: '40px',background:'black'}}>
           <font color="white" size="4">BIO</font>
        </div>
     </div>
@@ -80,7 +80,7 @@ const Profile = (props) => {
 
     <div className="row" id="socialMedia">
        <div className="col-xs-12 col-md-10 col-md-offset-1"
-          style={{height: '40px', background:'yellow',marginTop: "25px", marginBottom: "25px"}}>
+          style={{height: '40px', background:'black',marginTop: "25px", marginBottom: "25px"}}>
        <font color="white" size="4">FOLLOW ME</font>
         </div>
     </div>
@@ -89,7 +89,7 @@ const Profile = (props) => {
     <div className="lineBorder"></div>
     <div className="row" id="uploadsSection">
        <div className="col-xs-12 col-md-10 col-md-offset-1"
-          style={{background:'pink',marginTop: "25px"}}>
+          style={{background:'black',marginTop: "25px"}}>
           <font color="white" size="4" className="uploads">UPLOADS</font>
           <font style={{marginLeft: "15px"}} size="2" className="uploadsCount">UPVOTE COUNT: 55</font>
        </div>
@@ -97,7 +97,7 @@ const Profile = (props) => {
 
 
     <div className="row" id="videoClipsSection">
-       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{ height: '50px', background:'purple'}}>
+       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{ height: '50px', background:'black'}}>
           <p>Video Clips Here</p>
        </div>
     </div>
@@ -105,14 +105,14 @@ const Profile = (props) => {
 
     <div className="lineBorder" style={{marginTop: "25px"}}></div>
     <div className="row">
-       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'orange', marginTop: "25px"}}>
+       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'black', marginTop: "25px"}}>
           <font color="white" size="4" className="upvotedVideos">UPVOTED VIDEOS</font>
        </div>
     </div>
 
 
     <div className="row">
-       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'green', height: '50px'}}>
+       <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background:'black', height: '50px'}}>
           <p>Upvoted Clips Here</p>
        </div>
     </div>
