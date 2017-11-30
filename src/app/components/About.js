@@ -1,9 +1,9 @@
-import React from 'react'
+var React = require('react');
 
 const About = () => (
-  <div>
-    <h1>About</h1>
-  </div>
-)
+    <div>
+        <h1>About</h1>
+    </div>
+);
 
-export default About
+module.exports = About;
