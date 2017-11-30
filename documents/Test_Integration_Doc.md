@@ -73,6 +73,6 @@ This section describes components in our tests that are strictly dependant on on
 
 
 <p align="center">
-	<img src="../images/module-depnd.png" >
+	<img src="../images/module-depend.png" >
 	
 </p>
