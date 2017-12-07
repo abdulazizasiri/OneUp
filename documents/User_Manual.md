@@ -14,7 +14,7 @@ In the command line:
 
 - Step 5) ```webpack && node server.js ```
 
-- Step 6) Run http://localhost:3000/ on your web browswer 
+- Step 6) Run http://localhost:3000/ on your web browwer 
 
 - Step 7) Stop running the appliaction by hitting ```control + c ```
 
