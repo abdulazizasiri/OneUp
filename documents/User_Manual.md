@@ -37,8 +37,8 @@ In the command line:
 
 - ##### Home Page
   - This is where you can watch and vote on the best skate clips!
-  - Videos can be filtered by Week or by All-Time via the tabs on the top left of the 'Home' page.
-  - Upvote or downvote videos on the right-side of each video.
+  - Videos can be filtered by Week or by All-Time via clicking the tabs on the top left of the 'Home' page.
+  - Upvote or downvote videos on the right-side of each video by clicking the up or down arrows. 
   
   <p align="center">
 	<img src="../images/Home page mockup.png">
@@ -47,13 +47,13 @@ In the command line:
 - ##### Profile
   - This is your personalized page for OneUp!
   - Upload videos by clicking the '+' button on the upper right hand corner.
-    - Attach a video along with a title & description
-    - Click the 'Upload' button!
+    - Attach a video along with a title & description in the form
+    - Click the 'Upload' button to have your video posted on the 'Home' page for others to see and vote!
   - Change Settings
     - The settings button can be found under the username of the 'Profile' page.
-    - Fill in desired changes to your account and click 'Save'!
-  - View your uploaded videos
-  - View the videos you have upvoted
+    - Fill in desired changes to your account and click the 'Save' button! Your new settings should be updated on your profile page.
+  - View your uploaded videos in the 'Uploaded Videos' section of the 'Profile' page
+  - View the videos you have upvoted in the 'Upvoted Videos' section.
   
   <p align="center">
 	<img src="../images/OneUpUserUpdate.png">
@@ -65,7 +65,12 @@ In the command line:
   
   
 - ##### How Does Voting Work?
-  - You can only upvote or downvote a video once. The amount of votes for each video will filter the list by highest number of upvotes on the top to lowest number of upvotes
+  - You can only upvote or downvote a video once. The amount of votes for each video will filter the list by highest number of upvotes on the top to lowest number of upvotes. 
+  
+  
+#### Contact
+
+For any further questions or comments, feel free to email us at oneupskat3@gmail.com
 
  
 
