@@ -6,9 +6,11 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var expressValidator = require('express-validator');
+var upload = require('express-fileupload');
 var User = require('../models/user.js');
 var Video = require('../models/video.js');
 
+router.use(upload());
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(expressValidator());
 router.use(passport.initialize());
@@ -21,8 +23,14 @@ var props = {
     socialMediaOne: '',
     socialMediaTwo: '',
     socialMediaThree: '',
-    tabs: ['Home', 'About', 'Sign In/Create Account']
+    tabs: ['Home', 'About', 'Sign In/Create Account'],
+    videos: [],
+    random: [1, 2, 3, 4]
 };
+
+Video.find({}, function(err, video) {
+    props.videos = video;
+});
 
 var currentUser;
 
@@ -32,15 +40,6 @@ router.get('*', function(request, response) {
         location: request.url
     }, function(error, redirectLocation, renderProps) {
         if (renderProps) {
-          /*
-
-            console.log('');
-            console.log(renderProps.location.pathname);
-            console.log(props.loggedIn);
-            console.log('');
-
-            */
-            // console.log(renderProps.location.pathname);
             if (renderProps.location.pathname === '/profile' && props.loggedIn === false) {
                 return response.redirect('/signin');
             }
@@ -159,8 +158,36 @@ router.post('/settings', function(request, response) {
 });
 
 router.post('/uploadvideo', function(request, response) {
-    Video.saveVideo(request.body, currentUser);
-    return response.redirect('/profile');
+    var path = require('path');
+    if (request.files) {
+        var file = request.files.videofile,
+            filename = file.name;
+        file.mv(path.join(__dirname, "../../public/skateclips/" + filename), function(err) {
+            if (err) {
+                console.log(err);
+                response.send("error occurred");
+            } else {
+                var vid = Video(
+                    {
+                        videoPath: 'public/skateclips/' + filename,
+                        title: request.body.title,
+                        description: request.body.description,
+                        username: currentUser.username,
+                        totalUpvotes: 0
+                    }
+                ).save(function(err) {
+                    if (err) {
+                        throw err;
+                    }
+                    console.log("video saved");
+                    Video.find({}, function(err, video) {
+                        props.videos = video;
+                        return response.redirect('/profile');
+                    });
+                });
+            }
+        });
+    }
 });
 
 module.exports = router;
