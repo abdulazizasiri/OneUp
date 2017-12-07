@@ -39,6 +39,10 @@ In the command line:
   - This is where you can watch and vote on the best skate clips!
   - Videos can be filtered by Week or by All-Time via the tabs on the top left of the 'Home' page.
   - Upvote or downvote videos on the right-side of each video.
+  
+  <p align="center">
+	<img src="../images/Home page mockup.png">
+  </p>
 
 - ##### Profile
   - This is your personalized page for OneUp!
@@ -51,9 +55,14 @@ In the command line:
   - View your uploaded videos
   - View the videos you have upvoted
   
+  <p align="center">
+	<img src="../images/OneUpUserUpdate.png">
+  </p>
+  
 - ##### Video Modal
   - Every time a video is clicked, a video modal (popup window) will appear.
   - This will allow you to watch the video and also vote on it!
+  
   
 - ##### How Does Voting Work?
   - You can only upvote or downvote a video once. The amount of votes for each video will filter the list by highest number of upvotes on the top to lowest number of upvotes
