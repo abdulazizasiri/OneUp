@@ -17,6 +17,9 @@ var UserSchema = mongoose.Schema({
     password: {
         type: String
     },
+    profilePicPath: {
+        type: String
+    },
     bio: {
         type: String
     },
@@ -63,7 +66,7 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
     });
 };
 
-module.exports.updateUser = function(user, updatedInfo) {
+module.exports.updateUser = function(user, updatedInfo, profilePicPath) {
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(updatedInfo.changedPassword, salt, function(err, hash) {
             updatedInfo.changedPassword = hash;
@@ -73,6 +76,7 @@ module.exports.updateUser = function(user, updatedInfo) {
                     $set:
                       {
                           password: updatedInfo.changedPassword,
+                          profilePicPath: profilePicPath,
                           socialMediaOne: updatedInfo.socialMediaOne,
                           socialMediaTwo: updatedInfo.socialMediaTwo,
                           socialMediaThree: updatedInfo.socialMediaThree,

@@ -7,16 +7,19 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var expressValidator = require('express-validator');
 var upload = require('express-fileupload');
+var path = require('path');
 var User = require('../models/user.js');
 var Video = require('../models/video.js');
 
 router.use(upload());
+router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(expressValidator());
 router.use(passport.initialize());
 
 var props = {
     loggedIn: '',
+    profilePicPath: '',
     name: '',
     username: '',
     bio: '',
@@ -24,13 +27,18 @@ var props = {
     socialMediaTwo: '',
     socialMediaThree: '',
     tabs: ['Home', 'About', 'Sign In/Create Account'],
-    videos: [],
-    random: [1, 2, 3, 4]
+    videos: []
 };
 
+
+/*
 Video.find({}, function(err, video) {
     props.videos = video;
-});
+}); */
+
+Video.find().sort({totalUpvotes: -1}).exec(function (err, video) {
+    props.videos = video;
+})
 
 var currentUser;
 
@@ -39,6 +47,12 @@ router.get('*', function(request, response) {
         routes: require('./routes.js'),
         location: request.url
     }, function(error, redirectLocation, renderProps) {
+        Video.find().sort({totalUpvotes: -1}).exec(function (err, video) {
+            console.log('_____________________________');
+            console.log(video);
+            console.log('_____________________________');
+            props.videos = video;
+        })
         if (renderProps) {
             if (renderProps.location.pathname === '/profile' && props.loggedIn === false) {
                 return response.redirect('/signin');
@@ -69,6 +83,7 @@ passport.use(new LocalStrategy(
                 return done(null, false, {message: 'Unknown User'});
             }
 
+            props.profilePicPath = user.profilePicPath || 'https://www.dragonsearch.com/wp-content/themes/dragonsearch/library/images/placeholders/thumbnail_placeholder.png';
             props.name = user.name;
             props.username = user.username;
             props.bio = user.bio;
@@ -104,6 +119,18 @@ passport.deserializeUser(function(id, done) {
     User.getUserById(id, function(err, user) {
         done(err, user);
     });
+});
+
+router.post('/', function(request, response) {
+    Video.findOneAndUpdate(
+      {_id: request.body.videoID},
+      {$set: {totalUpvotes: request.body.newTotalUpvotes}},
+      function(err, doc) {
+          if (err) {
+              throw err;
+          }
+      }
+    );
 });
 
 router.post('/signin',
@@ -153,12 +180,24 @@ router.post('/register', function(request, response) {
 });
 
 router.post('/settings', function(request, response) {
-    User.updateUser(currentUser.username, request.body);
-    return response.redirect('/signin');
+    if (request.files) {
+        var file = request.files.profilepic,
+            filename = file.name;
+        file.mv(path.join(__dirname, "../../public/profilepics/" + filename), function(err) {
+            if (err) {
+                console.log(err);
+                response.send("error occurred");
+            } else {
+                var profilePicPath = 'public/profilepics/' + filename;
+                User.updateUser(currentUser.username, request.body, profilePicPath);
+                return response.redirect('/signin');
+            }
+        })
+    }
+    // return response.redirect('/signin');
 });
 
 router.post('/uploadvideo', function(request, response) {
-    var path = require('path');
     if (request.files) {
         var file = request.files.videofile,
             filename = file.name;
@@ -180,10 +219,15 @@ router.post('/uploadvideo', function(request, response) {
                         throw err;
                     }
                     console.log("video saved");
+                    /*
                     Video.find({}, function(err, video) {
                         props.videos = video;
                         return response.redirect('/profile');
-                    });
+                    }); */
+                    Video.find().sort({totalUpvotes: -1}).exec(function (err, video) {
+                        props.videos = video;
+                        return response.redirect('/profile');
+                    })
                 });
             }
         });
