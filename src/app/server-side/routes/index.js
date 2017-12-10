@@ -219,15 +219,7 @@ router.post('/uploadvideo', function(request, response) {
                         throw err;
                     }
                     console.log("video saved");
-                    /*
-                    Video.find({}, function(err, video) {
-                        props.videos = video;
-                        return response.redirect('/profile');
-                    }); */
-                    Video.find().sort({totalUpvotes: -1}).exec(function (err, video) {
-                        props.videos = video;
-                        return response.redirect('/profile');
-                    })
+                    return response.redirect('/profile');
                 });
             }
         });
