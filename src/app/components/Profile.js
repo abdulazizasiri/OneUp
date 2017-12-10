@@ -9,16 +9,6 @@ var Link = require('react-router').Link;
 
 const Profile = (props) => {
 
-    /*
-    console.log("I'm in the profile component");
-    console.log(props.name);
-    console.log(props.username);
-    console.log(props.bio);
-    */
-
-    // console.log(props.loggedIn);
-    // console.log(props.tabs);
-
     return (
         <div id="profilePage" className="profile container-fluid" style={{display: "true"}}>
             <div className="row">
@@ -26,8 +16,7 @@ const Profile = (props) => {
                     <div className="row">
                         <div className="col-xs-12 col-md-2" style={{height: '170px', background: ''}}>
                             <div className="profileImage">
-                                <img className="img-circle"
-                          src="https://www.dragonsearch.com/wp-content/themes/dragonsearch/library/images/placeholders/thumbnail_placeholder.png"/>
+                                <img className="img-circle" src={props.profilePicPath}/>
                             </div>
                         </div>
 

@@ -8,6 +8,7 @@
     height: 120px;
     border: 2px solid #FFFFFF;
     float: left;
+    transform: rotate(90deg);
 }
 
 .settingsButton {

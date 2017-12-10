@@ -2,7 +2,7 @@ var React = require('react');
 var Link = require('react-router').Link;
 
 const Settings = () => {
- 
+
     return (
         <div className="container-fluid">
             <div className="row">
@@ -19,12 +19,11 @@ const Settings = () => {
                             </div>
                             <div className="panel-body">
                                 <form id="signupform" className="form-horizontal"
-                                    role="form" method="POST" action="/settings">
+                                    encType="multipart/form-data" method="POST" action="/settings">
                                     <div className="row">
                                         <font className="col-xs-3 col-sm-3 col-md-3"
                                             color="white">Change Profile Picture</font>
-                                        <button className="col-xs-2 col-sm-2 col-md-2"
-                                            id="attachImageButton" type="button">Attach Image</button>
+                                          <input type="file" className="col-xs-2 col-sm-2 col-md-2" name="profilepic" accept="image/*" />
                                         <font className="col-xs-3 col-sm-3 col-sm-offset-1" color="white">
                                      Update Social Media
                                         </font>
