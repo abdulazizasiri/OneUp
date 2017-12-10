@@ -52,23 +52,23 @@ router.get('*', function(request, response) {
             console.log(video);
             console.log('_____________________________');
             props.videos = video;
-        })
-        if (renderProps) {
-            if (renderProps.location.pathname === '/profile' && props.loggedIn === false) {
-                return response.redirect('/signin');
-            }
+            if (renderProps) {
+                if (renderProps.location.pathname === '/profile' && props.loggedIn === false) {
+                    return response.redirect('/signin');
+                }
 
-            var html = ReactDOMServer.renderToString(
-                <ReactRouter.RouterContext {...renderProps}
-                    createElement={function(Component, renderProps) {
-                        return <Component {...renderProps} custom={props} />;
-                    }}
-                />
-            );
-            response.send(html);
-        } else {
-            response.status(404).send('Not Found');
-        }
+                var html = ReactDOMServer.renderToString(
+                    <ReactRouter.RouterContext {...renderProps}
+                        createElement={function(Component, renderProps) {
+                            return <Component {...renderProps} custom={props} />;
+                        }}
+                    />
+                );
+                response.send(html);
+            } else {
+                response.status(404).send('Not Found');
+            }
+        })
     });
 });
 
