@@ -48,9 +48,6 @@ router.get('*', function(request, response) {
         location: request.url
     }, function(error, redirectLocation, renderProps) {
         Video.find().sort({totalUpvotes: -1}).exec(function (err, video) {
-            console.log('_____________________________');
-            console.log(video);
-            console.log('_____________________________');
             props.videos = video;
             if (renderProps) {
                 if (renderProps.location.pathname === '/profile' && props.loggedIn === false) {
