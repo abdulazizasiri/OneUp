@@ -18,7 +18,7 @@ router.use(expressValidator());
 router.use(passport.initialize());
 
 var props = {
-    loggedIn: '',
+    loggedIn: 'false',
     profilePicPath: '',
     name: '',
     username: '',
