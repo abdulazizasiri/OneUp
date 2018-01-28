@@ -6,16 +6,15 @@ class Modal extends React.Component {
             return null;
         }
 
-
         let modalStyle = {
-            position: 'absolute',
-            top: '100%',
-            left: '200%',
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
             width: 650,
             height: 425,
             transform: 'translate(-50%, -50%)',
             zIndex: '9999',
-            background: '#353535'
+            background: '#602a2a'
         };
 
 
@@ -26,7 +25,7 @@ class Modal extends React.Component {
             left: 0,
             right: 0,
             backgroundColor: 'rgba(0,0,0,0.3)',
-            padding: 50
+            padding: 5
         };
 
 

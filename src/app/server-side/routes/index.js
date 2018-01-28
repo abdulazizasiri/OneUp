@@ -216,7 +216,7 @@ router.post('/uploadvideo', function(request, response) {
                         throw err;
                     }
                     console.log("video saved");
-                    return response.redirect('/profile');
+                    return response.redirect('/');
                 });
             }
         });

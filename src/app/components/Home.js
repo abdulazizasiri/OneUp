@@ -22,9 +22,12 @@ class Home extends React.Component {
                     <div className="col-xs-12 col-md-3 col-md-offset-1 text-center"
                         style={{background: '', height: '60px', top: '90px'}}>
                         <ul style={{marginTop: "15px"}} id="week_or_alltime">
+                          <div className="col-md-12 text-center"
+                              style={{background:'', right:'15px'}}>
                             <li><Link to="/"><span>WEEK</span></Link></li>
                             <b>|</b>
                             <li><Link to="/alltime"><span>ALL-TIME</span></Link></li>
+                          </div>
                         </ul>
                     </div>
                 </div>

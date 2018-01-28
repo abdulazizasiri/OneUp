@@ -3602,6 +3602,7 @@ class Video extends React.Component {
             isModalOpen: false,
             upvotes: props.metadata.totalUpvotes
         };
+        console.log(props);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.upvote = this.upvote.bind(this);
@@ -3686,12 +3687,9 @@ class Video extends React.Component {
                     React.createElement(
                         'div',
                         { className: 'col-xs-2 col-md-2', style: { background: '', height: '90px' } },
-                        React.createElement(
-                            'button',
-                            { onClick: this.openModal, className: 'video btn-primary',
-                                style: { height: '80px', width: '120px', position: 'absolute', top: '5px' } },
-                            'Video'
-                        ),
+                        React.createElement('button', { onClick: this.openModal, className: 'video btn-primary',
+                            style: { height: '80px', width: '120px', position: 'absolute', top: '5px',
+                                backgroundImage: "url(public/PageImages/thumbnails.jpg)", backgroundSize: "100% auto" } }),
                         React.createElement(
                             'div',
                             { className: 'center-modalSize', style: { position: 'relative', top: '150px', left: '110px' } },
@@ -3700,11 +3698,16 @@ class Video extends React.Component {
                                 { isOpen: this.state.isModalOpen, onClose: () => this.closeModal },
                                 React.createElement(
                                     'div',
-                                    { className: 'col-xs-12 col-md-12', style: { background: 'pink' } },
+                                    { className: 'col-xs-12 col-md-12', style: { background: '' } },
                                     React.createElement(
                                         'h1',
                                         { style: { color: 'white' } },
-                                        'WEEK 1 -- RANKED #1',
+                                        'WEEK 1 - RANKED #',
+                                        React.createElement(
+                                            'h1',
+                                            { style: { color: 'red', position: 'fixed', top: '0px', left: '380px' } },
+                                            this.props.rank
+                                        ),
                                         React.createElement('button', { onClick: this.closeModal,
                                             className: 'glyphicon glyphicon-remove' })
                                     )
@@ -3721,7 +3724,7 @@ class Video extends React.Component {
                                 React.createElement(
                                     'div',
                                     { className: 'col-xs-12 col-md-4 text-center',
-                                        style: { background: 'red', top: '20px', height: '90px' } },
+                                        style: { background: '', top: '20px', height: '90px', color: 'white' } },
                                     React.createElement(
                                         'p',
                                         null,
@@ -3756,7 +3759,7 @@ class Video extends React.Component {
                         { className: 'col-xs-3 col-md-2', style: { background: 'black', height: '90px' } },
                         React.createElement(
                             'div',
-                            { className: 'videoInfo', style: { position: 'absolute', top: '12px' } },
+                            { className: 'videoInfo', style: { position: 'absolute', top: '20px', color: 'white', fontFamily: 'AppleGothic', fontSize: '11px' } },
                             React.createElement(
                                 'p',
                                 { color: 'white' },
@@ -3777,7 +3780,7 @@ class Video extends React.Component {
                         { className: 'col-xs-3 col-md-5', style: { background: 'black', height: '90px' } },
                         React.createElement(
                             'div',
-                            { className: 'description', style: { position: 'absolute', top: '12px' } },
+                            { className: 'description', style: { position: 'absolute', top: '20px', color: 'white', fontFamily: 'AppleGothic', fontSize: '11px' } },
                             React.createElement(
                                 'p',
                                 null,
@@ -24993,7 +24996,6 @@ module.exports = Layout;
 
 var React = __webpack_require__(1);
 var Link = __webpack_require__(4).Link;
-
 /*
 import styles from '../CSS/HeaderStyle.css';
 import css from '../CSS/HeaderStyle.css';
@@ -25040,10 +25042,10 @@ const Header = props => {
         null,
         React.createElement(
             'nav',
-            { className: 'navbar navbar-inverse navbar-fixed-top app-navbar', role: 'navigation' },
+            { className: 'navbar navbar-inverse navbar-fixed-top app-navbar', role: 'navigation', style: { background: '', top: '0px' } },
             React.createElement(
                 'div',
-                { className: 'container' },
+                { className: 'container', style: { background: '', height: '90px' } },
                 React.createElement(
                     'div',
                     { className: 'navbar-header' },
@@ -25061,13 +25063,13 @@ const Header = props => {
                     ),
                     React.createElement(
                         'a',
-                        { className: 'navbar-brand', href: '/' },
-                        'OneUp'
+                        { className: 'navbar-brand', style: { fontFamily: 'Anurati', color: 'white', fontSize: '40px', position: 'relative', top: '40px' }, href: '/' },
+                        'ONE UP'
                     )
                 ),
                 React.createElement(
                     'div',
-                    { className: 'collapse navbar-collapse pull-right', id: 'navbar' },
+                    { className: 'collapse navbar-collapse pull-right', id: 'navbar', style: { position: 'relative', top: '40px' } },
                     React.createElement(
                         'ul',
                         { className: 'nav navbar-nav navbar-right' },
@@ -25136,33 +25138,38 @@ class Home extends React.Component {
                         'ul',
                         { style: { marginTop: "15px" }, id: 'week_or_alltime' },
                         React.createElement(
-                            'li',
-                            null,
+                            'div',
+                            { className: 'col-md-12 text-center',
+                                style: { background: '', right: '15px' } },
                             React.createElement(
-                                Link,
-                                { to: '/' },
+                                'li',
+                                null,
                                 React.createElement(
-                                    'span',
-                                    null,
-                                    'WEEK'
+                                    Link,
+                                    { to: '/' },
+                                    React.createElement(
+                                        'span',
+                                        null,
+                                        'WEEK'
+                                    )
                                 )
-                            )
-                        ),
-                        React.createElement(
-                            'b',
-                            null,
-                            '|'
-                        ),
-                        React.createElement(
-                            'li',
-                            null,
+                            ),
                             React.createElement(
-                                Link,
-                                { to: '/alltime' },
+                                'b',
+                                null,
+                                '|'
+                            ),
+                            React.createElement(
+                                'li',
+                                null,
                                 React.createElement(
-                                    'span',
-                                    null,
-                                    'ALL-TIME'
+                                    Link,
+                                    { to: '/alltime' },
+                                    React.createElement(
+                                        'span',
+                                        null,
+                                        'ALL-TIME'
+                                    )
                                 )
                             )
                         )
@@ -25203,14 +25210,14 @@ class Modal extends React.Component {
         }
 
         let modalStyle = {
-            position: 'absolute',
-            top: '100%',
-            left: '200%',
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
             width: 650,
             height: 425,
             transform: 'translate(-50%, -50%)',
             zIndex: '9999',
-            background: '#353535'
+            background: '#602a2a'
         };
 
         let backdropStyle = {
@@ -25220,7 +25227,7 @@ class Modal extends React.Component {
             left: 0,
             right: 0,
             backgroundColor: 'rgba(0,0,0,0.3)',
-            padding: 50
+            padding: 5
         };
 
         return React.createElement(
@@ -25342,13 +25349,41 @@ module.exports = AllTime;
 var React = __webpack_require__(1);
 
 const About = () => React.createElement(
+  'div',
+  null,
+  React.createElement(
     'div',
-    null,
+    { className: 'aboutTitle',
+      style: { position: 'relative', top: '90px', left: '45%', color: 'white', fontFamily: 'AppleGothic', color: 'red' } },
     React.createElement(
-        'h1',
-        null,
-        'About'
+      'h1',
+      null,
+      'About'
     )
+  ),
+  React.createElement(
+    'div',
+    { className: 'aboutBody',
+      style: { position: 'relative', top: '100px', color: 'white', fontFamily: 'AppleGothic', fontSize: '18', paddingLeft: '50px', paddingRight: '50px' } },
+    React.createElement(
+      'p',
+      null,
+      ' A balance between passion and progress. '
+    ),
+    React.createElement(
+      'p',
+      null,
+      ' There is a reason skaters live and breathe skateboarding. Skating isn\u2019t just another added hobby to your life, but becomes your way of life. Not everyone understand what it means to finally land that trick after days, weeks, or even months of trying -- but to us its everything and more. OneUp embodies the true nature of skating and aims to further skateboarding into the future.'
+    ),
+    React.createElement(
+      'p',
+      null,
+      ' The ultimate dream for any skater is to go pro and build a personal brand & career around it. However, the means to do so seem unfeasible. OneUp aims to make this process more efficient and effective by creating a space where skaters can surface up democratically, powered by those who know and love skateboarding. ',
+      React.createElement('br', null),
+      'The next generation of pro skaters are out there waiting to be discovered, and OneUp creates an equal chance for all.'
+    )
+  ),
+  React.createElement('img', { src: 'public/PageImages/aboutpage.jpg', style: { width: '500px', height: '350px', position: 'relative', top: '120px', left: '290px' } })
 );
 
 module.exports = About;
@@ -25390,7 +25425,7 @@ const SignIn = props => {
                         React.createElement(
                             'font',
                             { size: '5', color: 'white' },
-                            'OneUp'
+                            'Sign In'
                         )
                     )
                 ),
@@ -25419,7 +25454,7 @@ const SignIn = props => {
                                 { className: 'input-group-addon' },
                                 React.createElement('i', { className: 'glyphicon glyphicon-lock' })
                             ),
-                            React.createElement('input', { id: 'login-password', type: 'text', className: 'form-control',
+                            React.createElement('input', { id: 'login-password', type: 'password', className: 'form-control',
                                 name: 'password', style: { width: "95%" }, placeholder: 'Password' })
                         ),
                         React.createElement(
@@ -25501,7 +25536,7 @@ const Register = () => {
                         { id: "signupform", className: "form-horizontal", role: "form", method: "POST", action: "/register" },
                         React.createElement(
                             "font",
-                            { style: { color: "white", marginLeft: "50px" }, size: "3" },
+                            { style: { color: "white", marginLeft: "50px", fontFamily: "AppleGothic" }, size: "3" },
                             "Name"
                         ),
                         React.createElement(
@@ -25517,7 +25552,7 @@ const Register = () => {
                         ),
                         React.createElement(
                             "font",
-                            { style: { color: "white", marginLeft: "50px" }, size: "3" },
+                            { style: { color: "white", marginLeft: "50px", fontFamily: "AppleGothic" }, size: "3" },
                             "Email"
                         ),
                         React.createElement(
@@ -25533,7 +25568,7 @@ const Register = () => {
                         ),
                         React.createElement(
                             "font",
-                            { style: { color: "white", marginLeft: "50px" }, size: "3" },
+                            { style: { color: "white", marginLeft: "50px", fontFamily: "AppleGothic" }, size: "3" },
                             "Username"
                         ),
                         React.createElement(
@@ -25549,7 +25584,7 @@ const Register = () => {
                         ),
                         React.createElement(
                             "font",
-                            { style: { color: "white", marginLeft: "50px" }, size: "3" },
+                            { style: { color: "white", marginLeft: "50px", fontFamily: "AppleGothic" }, size: "3" },
                             "Password"
                         ),
                         React.createElement(
@@ -25560,12 +25595,12 @@ const Register = () => {
                                 { className: "input-group-addon" },
                                 React.createElement("i", { className: "glyphicon glyphicon-lock" })
                             ),
-                            React.createElement("input", { id: "signup-password", type: "text", className: "form-control",
+                            React.createElement("input", { id: "signup-password", type: "password", className: "form-control",
                                 name: "password", style: { width: "95%" }, placeholder: "Password" })
                         ),
                         React.createElement(
                             "font",
-                            { style: { color: "white", marginLeft: "50px" }, size: "3" },
+                            { style: { color: "white", marginLeft: "50px", fontFamily: "AppleGothic" }, size: "3" },
                             "Confirm Password"
                         ),
                         React.createElement(
@@ -25576,7 +25611,7 @@ const Register = () => {
                                 { className: "input-group-addon" },
                                 React.createElement("i", { className: "glyphicon glyphicon-lock" })
                             ),
-                            React.createElement("input", { id: "signup-password", type: "text", className: "form-control",
+                            React.createElement("input", { id: "signup-password", type: "password", className: "form-control",
                                 name: "confirmedPassword", style: { width: "95%" }, placeholder: "Password" })
                         ),
                         React.createElement(
@@ -25651,7 +25686,7 @@ const Profile = props => {
                                         { className: 'col-xs-8 col-md-8 text-center', style: { background: "" } },
                                         React.createElement(
                                             'font',
-                                            { className: 'name', color: 'white', size: '5' },
+                                            { className: 'name', color: 'white', size: '5', style: { fontFamily: "AppleGothic" } },
                                             props.name
                                         )
                                     )
@@ -25664,7 +25699,7 @@ const Profile = props => {
                                         { className: 'col-xs-8 col-md-8 text-center', style: { background: "" } },
                                         React.createElement(
                                             'font',
-                                            { className: 'username', color: 'white',
+                                            { className: 'username', color: 'white', style: { fontFamily: "AppleGothic" },
                                                 size: '3' },
                                             props.username
                                         )
@@ -25749,7 +25784,7 @@ const Profile = props => {
                 { className: 'col-xs-12 col-md-10 col-md-offset-1', style: { height: '40px', background: '' } },
                 React.createElement(
                     'font',
-                    { color: 'white', size: '4' },
+                    { color: 'white', size: '4', style: { fontFamily: "AppleGothic" } },
                     'BIO'
                 )
             )
@@ -25774,17 +25809,17 @@ const Profile = props => {
             ),
             React.createElement(
                 'font',
-                { style: { marginLeft: "120px" }, color: 'white', size: '2' },
+                { style: { marginLeft: "120px", fontFamily: "AppleGothic" }, color: 'white', size: '2' },
                 props.socialMediaOne
             ),
             React.createElement(
                 'font',
-                { style: { marginLeft: "120px" }, color: 'white', size: '2' },
+                { style: { marginLeft: "120px", fontFamily: "AppleGothic" }, color: 'white', size: '2' },
                 props.socialMediaTwo
             ),
             React.createElement(
                 'font',
-                { style: { marginLeft: "120px" }, color: 'white', size: '2' },
+                { style: { marginLeft: "120px", fontFamily: "AppleGothic" }, color: 'white', size: '2' },
                 props.socialMediaThree
             )
         ),
@@ -25798,13 +25833,14 @@ const Profile = props => {
                     style: { background: '', marginTop: "25px" } },
                 React.createElement(
                     'font',
-                    { color: 'white', size: '4', className: 'uploads' },
+                    { color: 'white', size: '4', className: 'uploads', style: { fontFamily: "AppleGothic" } },
                     'UPLOADS'
                 ),
                 React.createElement(
                     'font',
-                    { style: { marginLeft: "15px" }, size: '2', className: 'uploadsCount' },
-                    'UPLOAD COUNT: 0'
+                    { style: { marginLeft: "15px" }, size: '2', className: 'uploadsCount',
+                        style: { fontFamily: "AppleGothic", position: 'relative', left: '5px' } },
+                    ' UPVOTE COUNT: 0'
                 )
             )
         ),
@@ -25830,8 +25866,8 @@ const Profile = props => {
                 { className: 'col-xs-12 col-md-10 col-md-offset-1', style: { background: '', marginTop: "25px" } },
                 React.createElement(
                     'font',
-                    { color: 'white', size: '4', className: 'upvotedVideos' },
-                    'UPVOTED VIDEOS'
+                    { color: 'white', size: '4', className: 'upvotedVideos', style: { fontFamily: "AppleGothic" } },
+                    ' UPVOTED VIDEOS'
                 )
             )
         ),
@@ -25885,7 +25921,7 @@ const Settings = () => {
                             { className: 'row' },
                             React.createElement(
                                 'font',
-                                { color: 'white', size: '5', style: { marginLeft: "25px" } },
+                                { color: 'white', size: '5', style: { marginLeft: "25px", fontFamily: "AppleGothic" } },
                                 'SETTINGS'
                             ),
                             React.createElement(
@@ -25895,7 +25931,7 @@ const Settings = () => {
                                     Link,
                                     { to: '/profile' },
                                     React.createElement('span', { className: 'glyphicon glyphicon-remove',
-                                        style: { color: "red" } })
+                                        style: { color: "red", position: "relative", left: "5px", top: "-10" } })
                                 )
                             ),
                             React.createElement('br', null)
@@ -25913,13 +25949,13 @@ const Settings = () => {
                                     React.createElement(
                                         'font',
                                         { className: 'col-xs-3 col-sm-3 col-md-3',
-                                            color: 'white' },
+                                            color: 'white', style: { fontFamily: "AppleGothic" } },
                                         'Change Profile Picture'
                                     ),
                                     React.createElement('input', { type: 'file', className: 'col-xs-2 col-sm-2 col-md-2', name: 'profilepic', accept: 'image/*' }),
                                     React.createElement(
                                         'font',
-                                        { className: 'col-xs-3 col-sm-3 col-sm-offset-1', color: 'white' },
+                                        { className: 'col-xs-3 col-sm-3 col-sm-offset-1', color: 'white', style: { fontFamily: "AppleGothic" } },
                                         'Update Social Media'
                                     ),
                                     React.createElement('input', { className: 'col-xs-3 col-sm-2',
@@ -25930,7 +25966,7 @@ const Settings = () => {
                                     { className: 'row', style: { marginTop: "30px" } },
                                     React.createElement(
                                         'font',
-                                        { className: 'col-xs-3 col-sm-3 col-md-3', color: 'white' },
+                                        { className: 'col-xs-3 col-sm-3 col-md-3', color: 'white', style: { fontFamily: "AppleGothic" } },
                                         'Change Password'
                                     ),
                                     React.createElement('input', { className: 'col-xs-2 col-sm-2',
@@ -25949,7 +25985,7 @@ const Settings = () => {
                                     { className: 'row', style: { marginTop: "30px" } },
                                     React.createElement(
                                         'font',
-                                        { className: 'col-xs-3 col-sm-3 col-md-3', color: 'white' },
+                                        { className: 'col-xs-3 col-sm-3 col-md-3', color: 'white', style: { fontFamily: "AppleGothic" } },
                                         'Update Bio'
                                     ),
                                     React.createElement('textarea', { className: 'col-xs-7 col-sm-7',
@@ -26005,17 +26041,17 @@ const UploadVideo = props => {
                     { className: 'panel-heading' },
                     React.createElement(
                         'font',
-                        { color: 'white', size: '5', style: { marginLeft: "25px" } },
+                        { color: 'white', size: '5', style: { marginLeft: "25px", fontFamily: "AppleGothic" } },
                         'UPLOAD CLIP'
                     ),
                     React.createElement(
                         'button',
-                        { className: 'closeButton' },
+                        { className: 'closeVideoButton' },
                         React.createElement(
                             Link,
                             { to: '/profile' },
                             React.createElement('span', { className: 'glyphicon glyphicon-remove',
-                                style: { color: "red" } })
+                                style: { color: "red", position: "relative", left: "20px", top: "-10px" } })
                         )
                     ),
                     React.createElement('br', null)
@@ -26031,7 +26067,7 @@ const UploadVideo = props => {
                             { className: 'videos' },
                             React.createElement(
                                 'font',
-                                { style: { marginTop: "50px" }, className: 'videosLabel', color: 'white' },
+                                { style: { marginTop: "50px" }, className: 'videosLabel', color: 'white', style: { fontFamily: "AppleGothic" } },
                                 'Video'
                             ),
                             React.createElement('input', { type: 'file', style: { marginLeft: "105px", marginTop: "0px" },
@@ -26042,7 +26078,7 @@ const UploadVideo = props => {
                             { className: 'title', style: { marginTop: "35px" } },
                             React.createElement(
                                 'font',
-                                { className: 'titleLabel', color: 'white' },
+                                { className: 'titleLabel', color: 'white', style: { fontFamily: "AppleGothic" } },
                                 'Title'
                             ),
                             React.createElement('textarea', { className: 'videoTitle', cols: '40', rows: '1',
@@ -26054,7 +26090,7 @@ const UploadVideo = props => {
                             { className: 'descriptionTitle', style: { marginTop: "35px" } },
                             React.createElement(
                                 'font',
-                                { className: 'descriptionLabel', color: 'white' },
+                                { className: 'descriptionLabel', color: 'white', style: { fontFamily: "AppleGothic" } },
                                 'Description'
                             ),
                             React.createElement('textarea', { className: 'videoDescription', cols: '40', rows: '5',

@@ -11,34 +11,34 @@ const Register = () => {
                     </div>
                     <div style={{paddingTop: "20px"}} className="panel-bodyB">
                         <form id="signupform" className="form-horizontal" role="form" method="POST" action="/register">
-                            <font style={{color: "white", marginLeft: "50px"}} size="3">Name</font>
+                            <font style={{color: "white", marginLeft: "50px", fontFamily: "AppleGothic"}} size="3">Name</font>
                             <div style={{marginBottom: "25px"}} className="input-group">
                                 <span className="input-group-addon"><i className="glyphicon glyphicon-book"></i></span>
                                 <input id="signup-name" type="text" className="form-control"
                                     name="name" style={{width: "95%"}} placeholder="Name"/>
                             </div>
-                            <font style={{color: "white", marginLeft: "50px"}} size="3">Email</font>
+                            <font style={{color: "white", marginLeft: "50px", fontFamily: "AppleGothic"}} size="3">Email</font>
                             <div style={{marginBottom: "25px"}} className="input-group">
                                 <span className="input-group-addon"><i className="glyphicon glyphicon-envelope"></i></span>
                                 <input id="signup-email" type="text" className="form-control"
                                     name="email" style={{width: "95%"}} placeholder="Email"/>
                             </div>
-                            <font style={{color: "white", marginLeft: "50px"}} size="3">Username</font>
+                            <font style={{color: "white", marginLeft: "50px", fontFamily: "AppleGothic"}} size="3">Username</font>
                             <div style={{marginBottom: "25px"}} className="input-group">
                                 <span className="input-group-addon"><i className="glyphicon glyphicon-user"></i></span>
                                 <input id="signup-username" type="text" className="form-control"
                                     name="username" style={{width: "95%"}} placeholder="Username"/>
                             </div>
-                            <font style={{color: "white", marginLeft: "50px"}} size="3">Password</font>
+                            <font style={{color: "white", marginLeft: "50px", fontFamily: "AppleGothic"}} size="3">Password</font>
                             <div style={{marginBottom: "25px"}} className="input-group">
                                 <span className="input-group-addon"><i className="glyphicon glyphicon-lock"></i></span>
-                                <input id="signup-password" type="text" className="form-control"
+                                <input id="signup-password" type="password" className="form-control"
                                     name="password" style={{width: "95%"}} placeholder="Password"/>
                             </div>
-                            <font style={{color: "white", marginLeft: "50px"}} size="3">Confirm Password</font>
+                            <font style={{color: "white", marginLeft: "50px", fontFamily: "AppleGothic"}} size="3">Confirm Password</font>
                             <div style={{marginBottom: "25px"}} className="input-group">
                                 <span className="input-group-addon"><i className="glyphicon glyphicon-lock"></i></span>
-                                <input id="signup-password" type="text" className="form-control"
+                                <input id="signup-password" type="password" className="form-control"
                                     name="confirmedPassword" style={{width: "95%"}} placeholder="Password"/>
                             </div>
                             <div className="input-group">

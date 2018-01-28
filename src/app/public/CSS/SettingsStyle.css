@@ -35,6 +35,7 @@
    border-radius: 5px;
    background-color: #808080;
    border: 0;
+   color: white;
 }
 
 #editBioForm {
@@ -42,6 +43,7 @@
    border-radius: 5px;
    background-color: #808080;
    border: 0;
+   color: white;
 }
 
 #saveButton {

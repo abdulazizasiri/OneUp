@@ -9,6 +9,7 @@ class Video extends React.Component {
           isModalOpen: false,
           upvotes: props.metadata.totalUpvotes
         };
+        console.log(props);
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.upvote = this.upvote.bind(this);
@@ -79,11 +80,13 @@ class Video extends React.Component {
 
                         <div className="col-xs-2 col-md-2" style={{background: '', height: '90px'}}>
                             <button onClick={this.openModal} className="video btn-primary"
-                                style={{height: '80px', width: '120px', position: 'absolute', top: '5px'}}>Video</button>
+                                style={{height: '80px', width: '120px', position: 'absolute', top: '5px',
+                                  backgroundImage: "url(public/PageImages/thumbnails.jpg)", backgroundSize: "100% auto"}}></button>
                             <div className="center-modalSize" style={{position: 'relative', top: '150px', left: '110px'}}>
                                 <Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal}>
-                                    <div className="col-xs-12 col-md-12" style={{background: 'pink'}}>
-                                        <h1 style={{color: 'white'}}>WEEK 1 -- RANKED #1
+                                    <div className="col-xs-12 col-md-12" style={{background: ''}}>
+                                        <h1 style={{color: 'white'}}>WEEK 1 - RANKED #
+                                          <h1 style={{color: 'red', position:'fixed', top:'0px', left: '380px'}}>{this.props.rank}</h1>
                                             <button onClick={this.closeModal}
                                                 className="glyphicon glyphicon-remove"></button>
                                         </h1>
@@ -95,7 +98,7 @@ class Video extends React.Component {
                                         </div>
                                     </div>
                                     <div className="col-xs-12 col-md-4 text-center"
-                                        style={{background: 'red', top: '20px', height: '90px'}}>
+                                        style={{background: '', top: '20px', height: '90px', color:'white'}}>
                                         <p> {this.props.metadata.title} <br />
                                         by: {this.props.metadata.username} <br /> posted: date </p>
                                     </div>
@@ -110,13 +113,13 @@ class Video extends React.Component {
 
 
                         <div className="col-xs-3 col-md-2" style={{background: 'black', height: '90px'}}>
-                            <div className = "videoInfo" style={{position: 'absolute', top: '12px'}}>
+                            <div className = "videoInfo" style={{position: 'absolute', top: '20px', color:'white', fontFamily:'AppleGothic', fontSize:'11px'}}>
                                 <p color="white"> {this.props.metadata.title} <br />
                                 by: {this.props.metadata.username} <br /> posted: date</p>
                             </div>
                         </div>
                         <div className="col-xs-3 col-md-5" style={{background: 'black', height: '90px'}}>
-                            <div className="description" style={{position: 'absolute', top: '12px'}}>
+                            <div className="description" style={{position: 'absolute', top: '20px', color:'white', fontFamily:'AppleGothic', fontSize:'11px'}}>
                                 <p> {this.props.metadata.description} </p>
                             </div>
                         </div>

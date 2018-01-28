@@ -1,6 +1,5 @@
 var React = require('react');
 var Link = require('react-router').Link;
-
 /*
 import styles from '../CSS/HeaderStyle.css';
 import css from '../CSS/HeaderStyle.css';
@@ -44,8 +43,8 @@ const Header = (props) => {
 
     return (
         <header>
-            <nav className="navbar navbar-inverse navbar-fixed-top app-navbar" role="navigation">
-                <div className="container">
+            <nav className="navbar navbar-inverse navbar-fixed-top app-navbar" role="navigation" style ={{background:'', top:'0px'}}>
+                <div className="container" style={{background:'', height:'90px'}}>
 
                     <div className="navbar-header">
                         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -54,10 +53,10 @@ const Header = (props) => {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="/">OneUp</a>
+                        <a className="navbar-brand" style ={{fontFamily: 'Anurati', color:'white', fontSize: '40px', position:'relative', top: '40px'}}href="/">ONE UP</a>
                     </div>
 
-                    <div className="collapse navbar-collapse pull-right" id="navbar" >
+                    <div className="collapse navbar-collapse pull-right" id="navbar" style ={{position:'relative', top:'40px'}}>
                         <ul className="nav navbar-nav navbar-right">
                             {
                                 props.tabs.map(function(tab) {
@@ -86,4 +85,3 @@ const Header = (props) => {
 
 
 module.exports = Header;
-

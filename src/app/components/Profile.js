@@ -26,12 +26,12 @@ const Profile = (props) => {
                                 <div className="col-xs-6 col-md-6" style={{background: ''}}>
                                     <div className="row">
                                         <div className="col-xs-8 col-md-8 text-center" style={{background: ""}}>
-                                            <font className="name" color="white" size="5">{props.name}</font>
+                                            <font className="name" color="white" size="5" style={{fontFamily: "AppleGothic"}}>{props.name}</font>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-xs-8 col-md-8 text-center" style={{background: ""}}>
-                                            <font className="username" color="white"
+                                            <font className="username" color="white" style={{fontFamily: "AppleGothic"}}
                                                 size="3">{props.username}</font>
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@ const Profile = (props) => {
 
             <div className="row" id="bio">
                 <div className="col-xs-12 col-md-10 col-md-offset-1" style={{height: '40px', background: ''}}>
-                    <font color="white" size="4">BIO</font>
+                    <font color="white" size="4" style={{fontFamily: "AppleGothic"}}>BIO</font>
 
                 </div>
             </div>
@@ -89,9 +89,9 @@ const Profile = (props) => {
                     <font color="white" size="4">FOLLOW ME</font>
                 </div>
 
-                <font style={{marginLeft: "120px"}} color="white" size="2">{props.socialMediaOne}</font>
-                <font style={{marginLeft: "120px"}} color="white" size="2">{props.socialMediaTwo}</font>
-                <font style={{marginLeft: "120px"}} color="white" size="2">{props.socialMediaThree}</font>
+                <font style={{marginLeft: "120px", fontFamily: "AppleGothic"}} color="white" size="2">{props.socialMediaOne}</font>
+                <font style={{marginLeft: "120px", fontFamily: "AppleGothic"}} color="white" size="2">{props.socialMediaTwo}</font>
+                <font style={{marginLeft: "120px", fontFamily: "AppleGothic"}} color="white" size="2">{props.socialMediaThree}</font>
             </div>
 
 
@@ -99,8 +99,9 @@ const Profile = (props) => {
             <div className="row" id="uploadsSection">
                 <div className="col-xs-12 col-md-10 col-md-offset-1"
                     style={{background: '', marginTop: "25px"}}>
-                    <font color="white" size="4" className="uploads">UPLOADS</font>
-                    <font style={{marginLeft: "15px"}} size="2" className="uploadsCount">UPLOAD COUNT: 0</font>
+                    <font color="white" size="4" className="uploads" style={{fontFamily: "AppleGothic"}}>UPLOADS</font>
+                    <font style={{marginLeft: "15px"}} size="2" className="uploadsCount"
+                      style={{fontFamily: "AppleGothic", position:'relative', left:'5px'}}> UPVOTE COUNT: 0</font>
                 </div>
             </div>
 
@@ -115,7 +116,7 @@ const Profile = (props) => {
             <div className="lineBorder" style={{marginTop: "25px"}}></div>
             <div className="row">
                 <div className="col-xs-12 col-md-10 col-md-offset-1" style={{background: '', marginTop: "25px"}}>
-                    <font color="white" size="4" className="upvotedVideos">UPVOTED VIDEOS</font>
+                    <font color="white" size="4" className="upvotedVideos" style={{fontFamily: "AppleGothic"}}> UPVOTED VIDEOS</font>
                 </div>
             </div>
 

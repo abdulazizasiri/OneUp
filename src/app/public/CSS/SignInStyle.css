@@ -3,20 +3,20 @@
 }
 
 .panel > .panel-headingA {
-    background-image: url("https://ak9.picdn.net/shutterstock/videos/16866649/thumb/1.jpg?i10c=img.resize(height:160)");
     border: 0;
-    background-color: black;
+    background-image: url("https://ak9.picdn.net/shutterstock/videos/16866649/thumb/1.jpg?i10c=img.resize(height:160)");
+    font-family: AppleGothic;
 }
 
 .panel > .panel-bodyA {
-    background-image: url("https://ak9.picdn.net/shutterstock/videos/16866649/thumb/1.jpg?i10c=img.resize(height:160)");
     background-position: left center;
-    background-color: black;
+    background-image: url("https://ak9.picdn.net/shutterstock/videos/16866649/thumb/1.jpg?i10c=img.resize(height:160)");
 }
 
 .panel > .panel-headingB {
     background-image: url("https://ak9.picdn.net/shutterstock/videos/16866649/thumb/1.jpg?i10c=img.resize(height:160)");
     border: 0;
+    font-family: AppleGothic;
 }
 
 .panel > .panel-bodyB {
@@ -28,36 +28,42 @@
     border: 0;
     background-color: transparent;
     border-bottom: 1px solid white;
+    color: white;
 }
 
 #login-password.form-control {
     border: 0;
     background-color: transparent;
     border-bottom: 1px solid white;
+    color: white;
 }
 
 #signup-name.form-control {
    border: 0;
    background-color: transparent;
    border-bottom: 1px solid white;
+   color: white;
 }
 
 #signup-email.form-control {
    border: 0;
    background-color: transparent;
    border-bottom: 1px solid white;
+   color: white;
 }
 
 #signup-username.form-control {
    border: 0;
    background-color: transparent;
    border-bottom: 1px solid white;
+   color: white;
 }
 
 #signup-password.form-control {
    border: 0;
    background-color: transparent;
    border-bottom: 1px solid white;
+   color: white;
 }
 
 .input-group-addon {
@@ -89,4 +95,3 @@
     border-color: white;
     width: 150%;
 }
-

@@ -18,7 +18,7 @@ const SignIn = (props) => {
                 className="mainbox col-sm-6 col-sm-offset-3 col-md-6 col-offset-3 col-lg-6 col-lg-offset-3">
                 <div className="panel panel-info">
                     <div className="panel-headingA" style={{paddingTop: "15px"}}>
-                        <center><font size="5" color="white">OneUp</font></center>
+                        <center><font size="5" color="white">Sign In</font></center>
                     </div>
                     <div style={{paddingTop: "20px"}} className="panel-bodyA">
                         <form id="loginform" className="form-horizontal" role="form" method="POST" action="/signin">
@@ -29,7 +29,7 @@ const SignIn = (props) => {
                             </div>
                             <div style={{marginBottom: "25px"}} className="input-group">
                                 <span className="input-group-addon"><i className="glyphicon glyphicon-lock"></i></span>
-                                <input id="login-password" type="text" className="form-control"
+                                <input id="login-password" type="password" className="form-control"
                                     name="password" style={{width: "95%"}} placeholder="Password"/>
                             </div>
                             <div className="input-group">
